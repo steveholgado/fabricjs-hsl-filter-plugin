@@ -4,17 +4,13 @@ Add to your page after FabricJS has loaded and call like this:
 
 ```
 
-var hue = 1;        // Range: 0 to 1
-var brightness = 1; // Range: 0 to 1
-var lightness = 1;  // Range: 0 to 1
-
-var filterHSL = new img.filters.HSL({
-    hue: hue,
-    saturation: saturation,
-    lightness: lightness
+var filterHSL = new fabric.Image.filters.HSL.HSL({
+    hue: 1,        // Range: 0 to 1
+    saturation: 1, // Range: 0 to 1
+    lightness: 1   // Range: 0 to 1
 });
 
-img.filters = [filterHSL];
-img.applyFilters(canvas.renderAll.bind(canvas));
+img.filters.push(filterHSL);
+img.applyFilters();
 
 ```
